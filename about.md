@@ -15,4 +15,4 @@ This blog serves as a personal archive aswell as a self-marketing page.
 
 ### Contact me
 
-[gebauerm@gmail.com](mailto:gebauerm@gmail.com)
+[gebauerm23@gmail.com](mailto:gebauerm23@gmail.com)
