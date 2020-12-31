@@ -6,7 +6,7 @@
 name: Michael Gebauer
 
 # Short bio or description (displayed in the header)
-description: Data Scientist in Berlin
+description: Data Scientist from Berlin
 
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
 avatar: https://avatars1.githubusercontent.com/u/44670806?s=400&u=268dfe16203d623e61e752e30cc32b81d77b7f49&v=4
@@ -47,7 +47,7 @@ url:
 # (http://yourusername.github.io/repository-name)
 # and NOT your User repository (http://yourusername.github.io)
 # then add in the baseurl here, like this: "/repository-name"
-baseurl: ""
+baseurl: "/math_journey"
 
 #
 # !! You don't need to change any of the configuration flags below !!
