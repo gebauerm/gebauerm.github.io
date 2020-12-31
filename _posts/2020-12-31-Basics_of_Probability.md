@@ -3,8 +3,7 @@ layout: post
 title: Basics of Probability
 ---
 
- {% raw %}
-$$
+
+\begin{equation}
 a = \frac{a}{b}
-$$
-{% endraw %}
+\end{equation}
