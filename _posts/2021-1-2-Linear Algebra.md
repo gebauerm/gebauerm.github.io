@@ -394,7 +394,7 @@ $$
 Solving for one, applies for all:
 
 $$
-a_{1,1} * (\lambda b_2 + \mu c_2) * a_{3,3} = \lambda a_{1,1}*a b_2 * a_{3,3} + \mu a_{1,1}*c_2 * a_{3,3}
+a_{1,1} * (\lambda b_2 + \mu c_2) * a_{3,3} = \lambda a_{1,1}* b_2 * a_{3,3} + \mu a_{1,1}*c_2 * a_{3,3}
 $$
 
 Hence for the first and thus also for the second determinante:
