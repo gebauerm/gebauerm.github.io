@@ -21,6 +21,7 @@ body {
 	background: $white;
   font: 18px/1.4 $helvetica;
   color: $darkGray;
+  counter-reset: defcounter;
 }
 
 .container {
@@ -208,6 +209,31 @@ img {
   @include mobile {
     margin: 3px 0;
   }
+}
+
+
+dl {
+    display: block;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 1em;
+    margin-right: 1em;
+    border: 3px double #ccc;
+    padding: 0.5em;
+  }
+
+dt::before {
+counter-increment: defcounter;                  /* Erhöht den Abschnittszähler */
+content: "Definition " counter(defcounter) ": "; /* Zeigt den Zähler an */
+
+}
+dt {
+font-weight: bold;
+text-decoration: underline;
+}
+dd {
+margin: 0;
+padding: 0 0 0.5em 0;
 }
 
 nav {
