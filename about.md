@@ -11,7 +11,9 @@ I was also able to publish some research papers as a co-author and will be start
 Unfortunately working in business projects doesnt give the desired depth in methodology 
 I am surging for, therefore I try to push myself to 
 learn more about mathmatics, statistics and related data science concepts.
-This blog serves as a personal archive aswell as a self-marketing page.
+This blog serves as a personal archive for this journey.
+
+Used literature will be linked at the end of every blog article.
 
 ### Contact me
 

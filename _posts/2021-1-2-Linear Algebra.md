@@ -1,17 +1,16 @@
 ---
 layout: post
-title: Linear Algebra
+title: Linear Algebra - Determinantes
 ---
 
-This chapter is devoted to revising some basic linear algebra.
+This chapter is part of a series that revisits some basic linear algebra.
+In this chapter well summarize basic concepts revolving around determinantes.
 
-## Determinants
-
-### Number Fields
+## Number Fields
 
 $K$ is a number field, so to say a set of numbers, which follows the following aritmethic operations.
 
-#### Addition and Substraction
+### Addition and Substraction
 
 1. Commutative
 
@@ -45,7 +44,7 @@ $K$ is a number field, so to say a set of numbers, which follows the following a
 
 The 4th rule enables us to carry out rules for substraction.
 
-#### Multiplication and Division
+### Multiplication and Division
 
 1. Commutative
 
@@ -86,7 +85,7 @@ Operation of devision is carried out by the solvability of the 4th operation.
 Two fields $K$ and $K'$ are isomorphic if, there is a one-to-one relation between both, such that every number and its product and sum is associated with the corresponding number and its product and sum. The same accounts for its differences or quotient.
 
 
-### Systems of Linear Equations
+## Systems of Linear Equations
 
 A system of linear equations can be seen here:
 
@@ -97,7 +96,7 @@ a_{2,1} x_1 + a_{2,2}x_2 +  ... + a_{2, n}x_n = b_2 \\
 a_{n,1} x_1 + a_{n,2}x_2 +  ... + a_{n, n}x_n = b_n
 \end{aligned}$$
 
-####  Terminoligy
+###  Terminoligy
 $a_{1,1}, a_{2, 1}, ... , a_{n,n}$ - coefficient from $K$
 
 $x_1, x_2, ... , x_n$ - Unknown elements, to be determined from $K$
@@ -134,7 +133,7 @@ When studying these systems some basic problems arise, which need to be tackled.
 
 A basic mathmatical tool for studying these problems is the determinate. It helps us solving these problems.
 
-### Determinate of Order n
+## Determinate of Order n
 
 Given a square matrix of order $n$, hence a matrix with $n^2$ numbers $a_{i,j}$ from $i,j = (1, 2, ..., n)$
 
@@ -149,7 +148,7 @@ The number of columns and rows is called order. The first index indicates the ro
 
 From here on we will start to define the determinant. Before stating the definition we need to make some assumptions.
 
-#### Assumtpions
+### Assumtpions
 
 * We take the product of every element, but every factor in the product needs to be an element from a different row and column from the matrix.
 
@@ -185,6 +184,7 @@ $$
 </dl>
 
 #### Example
+
 $$
 \begin{vmatrix}
     a_{1,1} & a_{1,2} & a_{1,3} \\
@@ -208,9 +208,230 @@ $=$
 
 $$
 \begin{aligned}
-
-
 &a_{1,1}*a_{2,2}*a_{3,3} -a_{1,1}*a_{3,2}*a_{2,3} - a_{2,1}*a_{1,2}*a_{3,3} \\
 &+ a_{2,1}*a_{3,2}*a_{1,3} + a_{3,1}*a_{1,2}*a_{2,3} - a_{3,1}*a_{2,2}*a_{1,3} 
 \end{aligned}
 $$
+
+### Role of Determinantes to solve linear equations
+
+The following linear equations can be used to illustrate how finding their solution is tied to the determinant.
+
+$$
+\begin{aligned}
+a_{1,1}x_1 + a_{1,2}x_2 = b_1
+a_{2,1}x_1 + a_{2,2}x_2 = b_2
+\end{aligned}
+$$
+
+$$
+x_1=\frac{b_1a_{2,2} - b_2a_{1,2}}{a_{1,1}a_{2,2} - a_{2,1}a_{1,2}},
+x_2=\frac{b_2a_{1,1} - b_1a_{2,1}}{a_{1,1}a_{2,2} - a_{2,1}a_{1,2}}
+$$
+
+This can be represented as second order determinates.
+
+$$
+\begin{aligned}
+a_{1,1}a_{2,2} - a_{2,1}a_{1,2} &=
+\begin{vmatrix}
+a_{1,1} & a _{1,2} \\
+a_{2,1} & a_{2,2}
+\end{vmatrix}
+\\
+\\
+b_1a_{2,2} - b_2a_{1,2} &=
+\begin{vmatrix}
+b_1 & a _{1,2} \\
+b_2 & a_{2,2}
+\end{vmatrix}
+\\
+\\
+a_{1,1}b_2 - a_{2,1}b_1 &=
+\begin{vmatrix}
+a_{1,1} & b_1 \\
+a_{2,1} & b_2
+\end{vmatrix}
+\end{aligned}
+$$
+
+### Determining the sign of the Determinant
+
+The sign of a term within the determinant can be defined by a simple rule.
+Elements of the product can be connected via a line within the matrix. This line has a slope. If the left element is lower than the right element, it has a negative slope. If the left element is higher than the right element, than it has a positive slope. This term shall not be confused with the slope of a function or similar expressions.
+For every product, only egative slopes shall be defined within the matrix. If the
+number of lines is odd - than the sign before the term is a minus, if the amount of negative slopes is event, the factor of the product within the determinant has a positive sign.
+
+
+For $a_{2,1} * a_{1,2} * a_{3,3}$ we have a __negative__ sign because there is one negative slope:
+
+![first_example]({{ site.baseurl }}/images/slope_negative_determinant_2.png)
+
+For $a_{3,1} * a_{1,2} * a_{2,3}$ the sign is __positive__ because of two negative slopes:
+
+![first_example]({{ site.baseurl }}/images/slope_negative_determinant.png)
+
+
+## Properties of Determinantes
+
+### Transpose
+
+A Transpose of a matrix can be defined as the following.
+
+<dl>
+<dt> Transpose </dt>
+<dd> A matrix $A$ transpose $A^T$ is the flipping of an original matrix along its diagonal. Hence:
+
+$$
+\begin{bmatrix}
+    a_{1,1} & a_{1,2} & a_{1,3} \\
+    a_{2,1} & a_{2,2} & a_{2,3} \\
+    a_{3,1} & a_{3,2} & a_{3,3}
+\end{bmatrix}
+=
+\begin{bmatrix}
+    a_{1,1} & a_{2,1} & a_{3,1} \\
+    a_{1,2} & a_{2,2} & a_{3,2} \\
+    a_{1,3} & a_{2,3} & a_{3,3}
+\end{bmatrix}^T
+$$
+
+The determinant of a matrix transpose has the same value.
+$$
+det||A|| = det || A^T||
+$$
+Hence there is equivalence among rows and columns of a determinant.
+
+</dd>
+</dl>
+
+### Antisymmetry property
+
+When columns of a determinant change the detminant changes signs. In the example below terms that were negative before became positive and vice versa.
+
+__Normal__
+
+$$
+\begin{vmatrix}
+    a_{1,1} & a_{1,2} & a_{1,3} \\
+    a_{2,1} & a_{2,2} & a_{2,3} \\
+    a_{3,1} & a_{3,2} & a_{3,3}
+\end{vmatrix}
+= 
+\begin{aligned}
+&a_{1,1}*a_{2,2}*a_{3,3} -a_{1,1}*a_{3,2}*a_{2,3} - a_{2,1}*a_{1,2}*a_{3,3} \\
+&+ a_{2,1}*a_{3,2}*a_{1,3} + a_{3,1}*a_{1,2}*a_{2,3} - a_{3,1}*a_{2,2}*a_{1,3} 
+\end{aligned}
+$$
+
+__Changed__
+In this example one column is changed with another.
+
+$$
+\begin{vmatrix}
+    a_{1,1} & a_{1,3} & a_{1,2} \\
+    a_{2,1} & a_{2,3} & a_{2,2} \\
+    a_{3,1} & a_{3,3} & a_{3,2}
+\end{vmatrix}
+= 
+\begin{aligned}
+&-a_{1,1}*a_{2,2}*a_{3,3} +a_{1,1}*a_{3,2}*a_{2,3} + a_{2,1}*a_{1,2}*a_{3,3} \\
+&- a_{2,1}*a_{3,2}*a_{1,3} - a_{3,1}*a_{1,2}*a_{2,3} + a_{3,1}*a_{2,2}*a_{1,3} 
+\end{aligned}
+$$
+
+### Determinantes with identical columns
+
+If a column $j$ and $k$ ($j<k$) are interchanged, it requires $2m+1$ changes to make, while $m$ is the distance of the columns to each other. The sign of the determinant is defined by $2m+1$ being odd (negative) or even (positive).
+
+__Determinantes with identical columns vanish ($D(A) = 0$)__
+
+### Linear Property of Determinantes
+
+<div class="theorem">
+If all elements of the jth column of a determinant $D$ are "linear combinations of two numbers:
+
+$$
+a_{i,j} = \lambda b_i+\mu c_i (i = 1, 2, ..., n)
+$$
+
+, where $\lambda$ and $\mu$ are fixed numbers, than $D$ is equal to a linear combination of determinantes.
+
+$$
+D = \lambda D_1 + \mu D_2
+$$
+
+Hence $D_1$ and $D_2$ re the same cols except for the jth column.
+
+Can also be written as:
+
+$$
+D(\lambda b_i + \mu c_i) = \lambda D_j(b_i) + \mu D_j(c_i)
+$$
+</div>
+
+$D_j(b_i) \sim$ determinant to be received, when the jth column is replaced with values of $b_i$
+
+<div class="proof">
+$$
+D_j(\lambda b_i + \mu c_i) =
+\begin{vmatrix}
+    a_{1,1} & \lambda b_1 + \mu c_1 & a_{1,3} \\
+    a_{2,1} & \lambda b_2 + \mu c_2 & a_{2,3} \\
+    a_{3,1} & \lambda b_3 + \mu c_3 & a_{3,3}
+\end{vmatrix}
+$$
+$$
+\begin{aligned}
+= 
+&a_{1,1} * (\lambda b_2 + \mu c_2) * a_{3,3} - a_{1,1} * (\lambda b_3 + \mu c_3 ) * a_{2,3} \\
+&-a_{2,1} * (\lambda b_1 + \mu c_1) * a_{3,3} + a_{2,1} * (\lambda b_3 + \mu c_3) * a_{1,3} \\
+&-a_{3,1}*(\lambda b_2 + \mu c_2 )*a_{1,3} + a_{3,1}*(\lambda b_1 + \mu c_1 )*a_{2,3}
+\end{aligned}
+$$
+
+Solving for one, applies for all:
+
+$$
+a_{1,1} * (\lambda b_2 + \mu c_2) * a_{3,3} = \lambda a_{1,1}*a b_2 * a_{3,3} + \mu a_{1,1}*c_2 * a_{3,3}
+$$
+
+Hence for the first and thus also for the second determinante:
+$$
+\begin{aligned}
+\lambda D_j(b_i)
+=& \lambda(a_{1,1}*b_2*a_{3,3} -a_{1,1}*b_3*a_{2,3} - a_{2,1}*b_1*a_{3,3} \\
+&+ a_{2,1}*b_3*a_{1,3} + a_{3,1}*b_1*a_{2,3} - a_{3,1}*b_2*a_{1,3}) 
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+\mu D_j(c_i)
+=& \mu(a_{1,1}*c_2*a_{3,3} -a_{1,1}*c_3*a_{2,3} - a_{2,1}*c_1*a_{3,3} \\
+&+ a_{2,1}*c_3*a_{1,3} + a_{3,1}*c_1*a_{2,3} - a_{3,1}*c_2*a_{1,3}) 
+\end{aligned}
+$$
+
+</div>
+<br>
+
+### Addition of another arbitrary column to another column
+
+<div class="theorem">
+The value of a determinant is not chanhed by adding the elements of one column multiplied by an arbitrary number to the corresponding elements of another column
+
+$$
+a_{i,j} = a_{i,j} + \lambda a_{i,k}
+
+D(a_j) = D(a_{i,j}) + \lambda D(a_{i,k})
+$$
+
+$D(a_{i,k})$ changes to zero, because to identical columns are present. Hence:
+
+$$
+D(a_{i,j} + \lambda a_{i,k}) = D(a_{i,j})
+$$
+</div>
+
+## Cofactors and Minors

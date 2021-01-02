@@ -22,6 +22,7 @@ body {
   font: 18px/1.4 $helvetica;
   color: $darkGray;
   counter-reset: defcounter;
+  counter-reset: theorem;
 }
 
 .container {
@@ -211,6 +212,31 @@ img {
   }
 }
 
+
+.theorem {
+    display: block;
+    margin: 12px 0;
+    font-style: italic;
+}
+.theorem:before {
+    content: "Theorem: ";
+    font-weight: bold;
+    font-style: normal;
+}
+
+.proof {
+    display: block;
+    margin: 12px 0;
+    font-style: normal;
+}
+.proof:before {
+    content: "Proof.";
+    font-style: italic;
+}
+.proof:after {
+    content: "\25FC";
+    float:right;
+}
 
 dl {
     display: block;
