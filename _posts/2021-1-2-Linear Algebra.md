@@ -325,6 +325,7 @@ $$
 $$
 
 __Changed__
+
 In this example one column is changed with another.
 
 $$
@@ -344,12 +345,12 @@ $$
 
 If a column $j$ and $k$ ($j<k$) are interchanged, it requires $2m+1$ changes to make, while $m$ is the distance of the columns to each other. The sign of the determinant is defined by $2m+1$ being odd (negative) or even (positive).
 
-__Determinantes with identical columns vanish ($D(A) = 0$)__
+_Determinantes with identical columns vanish ($D(A) = 0$)_
 
 ### Linear Property of Determinantes
 
 <div class="theorem">
-If all elements of the jth column of a determinant $D$ are "linear combinations of two numbers:
+If all elements of the jth column of a determinant $D$ are "linear combinations" of two numbers:
 
 $$
 a_{i,j} = \lambda b_i+\mu c_i (i = 1, 2, ..., n)
