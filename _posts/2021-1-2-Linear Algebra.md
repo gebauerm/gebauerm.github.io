@@ -627,7 +627,7 @@ It also applies for any other element within the matrix A. We would move any ele
     W(x_1, x_2, ..., x_n) = a(x_1, x_2, ..., x_{n-1})* \prod_{k=1}^{n-1}{(x_n-x_k)}
     $$
 
-    Whereby $a(x_1, x_2, x_{n-1})$ is a polynomials itself, of order $n-1$. When you divide it by $(x_n - root)$, you will see that it is actually $W(x_1, x_2, ..., x_{n-1})$
+    Whereby $a(x_1, x_2, x_{n-1})$ is a polynomials itself, of order $n-1$. When you calculate it, you will see that it is actually $W(x_1, x_2, ..., x_{n-1})$
     Hence, because $W(x_1)=1$ it simplifies to:
 
     $$
