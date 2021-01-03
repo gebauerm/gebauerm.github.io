@@ -31,3 +31,8 @@ https://media.nips.cc/Conferences/2016/Slides/6199-Slides.pdf
 
 Graphical Models, Exponential Families:
 https://people.eecs.berkeley.edu/~wainwrig/Papers/WaiJor08_FTML.pdf
+
+## Other
+
+Polynomials:
+https://www.adelaide.edu.au/mathslearning/system/files/media/documents/2019-09/mt1-polynomials-book.pdf
