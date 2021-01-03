@@ -425,6 +425,8 @@ The value of a determinant is not chanhed by adding the elements of one column m
 
 $$
 a_{i,j} = a_{i,j} + \lambda a_{i,k}
+$$
+$$
 
 D(a_j) = D(a_{i,j}) + \lambda D(a_{i,k})
 $$
