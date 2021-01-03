@@ -589,7 +589,7 @@ It also applies for any other element within the matrix A. We would move any ele
     \end{aligned}
     $$
 
-    3. Vandermonde Determinant
+3. Vandermonde Determinant
 
     $$
     W(x_1, x_2, ..., x_n) = 
