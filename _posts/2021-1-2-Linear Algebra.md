@@ -609,6 +609,8 @@ It also applies for any other element within the matrix A. We would move any ele
 
     $$
     p(x) = x^3 +2x^2-3x-6
+    $$
+    $$
     p(x=-2) = 8 - 8 + 6 - 6 = 0
     $$
     We can write:
